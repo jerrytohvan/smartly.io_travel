@@ -30,7 +30,7 @@
       </div>
     </div>
 
-    <a id="search-button-submit" class="btn btn-primary" role="button" ng-href="#/hotels?city={{ selectedCity }}&checkin={{ selectedCheckin | date:'yyyy-MM-dd':'UTC' }}&checkout={{ selectedCheckout | date:'yyyy-MM-dd':'UTC' }}&adults={{ selectedAdults }}">Search</a>
+    <a id="search-button-submit" ng-click="facebookPixel()" class="btn btn-primary" role="button" ng-href="#/hotels?city={{ selectedCity }}&checkin={{ selectedCheckin | date:'yyyy-MM-dd':'UTC' }}&checkout={{ selectedCheckout | date:'yyyy-MM-dd':'UTC' }}&adults={{ selectedAdults }}">Search</a>
   </form>
 
 
@@ -55,9 +55,25 @@
   </div>
 </div>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
   //add custom tracks
     $('#$search-button-submit').click(function() {
-      fbq('track', 'hotelSearchSubmit', {currency: "USD", value: 30.00});
+      fbq('track', 'Search');
    });
-</script>
+</script> -->
+
+
+<script>
+  angular.module('travelApp', [])
+  .controller('mainCtrl', ['$scope', function($scope) {
+      $scope.facebookPixel = function() {
+          fbq('track', 'Search',{
+            city: $scope.selectedCity,
+            checkin: $scope.selectedCheckin,
+            checkout: $scope.selectedCheckout,
+            adults: selectedAdults
+          });
+      };
+  }]);
+  </script>
+  
