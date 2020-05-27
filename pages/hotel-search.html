@@ -30,7 +30,7 @@
       </div>
     </div>
 
-    <a class="btn btn-primary" role="button" ng-href="#/hotels?city={{ selectedCity }}&checkin={{ selectedCheckin | date:'yyyy-MM-dd':'UTC' }}&checkout={{ selectedCheckout | date:'yyyy-MM-dd':'UTC' }}&adults={{ selectedAdults }}">Search</a>
+    <a id="search-button-submit" class="btn btn-primary" role="button" ng-href="#/hotels?city={{ selectedCity }}&checkin={{ selectedCheckin | date:'yyyy-MM-dd':'UTC' }}&checkout={{ selectedCheckout | date:'yyyy-MM-dd':'UTC' }}&adults={{ selectedAdults }}">Search</a>
   </form>
 
 
@@ -54,3 +54,10 @@
     </a>
   </div>
 </div>
+
+<script type="text/javascript">
+  //add custom tracks
+    $('#$search-button-submit').click(function() {
+      fbq('track', 'hotelSearchSubmit', {currency: "USD", value: 30.00});
+   });
+</script>
