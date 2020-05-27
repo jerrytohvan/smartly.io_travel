@@ -1,0 +1,45 @@
+/*html {
+  background: url(img/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}*/
+
+a {
+  cursor: pointer;
+}
+
+.list-image {
+  width: 128px;
+  height: auto;
+}
+
+.hotel-image {
+  width: 480px;
+  height: auto;
+}
+
+.search-bar > * {
+  vertical-align: top;
+}
+
+.travelers-picker {
+  width: 80px;
+  min-width: 80px;
+}
+
+.search-bar .input-group,
+.search-bar .input-group .input-group-btn {
+  display: inline-table;
+}
+
+.input-label {
+  width:100px;
+  padding:0;
+}
+
+.force-round-right-border {
+  border-top-right-radius: 4px !important;
+  border-bottom-right-radius: 4px !important;
+}

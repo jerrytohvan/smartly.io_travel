@@ -1,0 +1,56 @@
+<div class="jumbotron text-center">
+  <h1><i class="fa fa-hotel"></i> Hotels</h1>
+
+  <form class="search-bar">
+
+    <div class="input-group">
+      <span class="input-group-addon input-label" id="city-label"><i class="fa fa-map-marker"></i> City</span>
+      <input type="text" class="form-control force-round-right-border" aria-describedby="city-label" ng-model="selectedCity" uib-typeahead="city for city in cities | filter:$viewValue | limitTo:8" typeahead-show-hint="true" typeahead-min-length="0" typeahead-editable="false" typeahead-focus-on-select="false">
+    </div>
+
+    <div class="input-group">
+      <span class="input-group-addon input-label" id="checkin-label"><i class="fa fa-calendar"></i> Check in</span>
+      <input type="date" class="form-control date-input" aria-describedby="checkin-label" ng-model="selectedCheckin" ng-model-options="{timezone:'UTC'}">
+    </div>
+
+    <div class="input-group">
+      <span class="input-group-addon input-label" id="checkout-label"><i class="fa fa-calendar"></i> Check out</span>
+      <input type="date" class="form-control date-input" aria-describedby="checkout-label" ng-model="selectedCheckout" ng-model-options="{timezone:'UTC'}">
+    </div>
+
+    <div class="input-group">
+      <span class="input-group-addon input-label" id="adults-label"><i class="fa fa-user"></i> Travelers</span>
+      <div class="input-group-btn" uib-dropdown aria-describedby="adults-label">
+        <button id="adults-button" type="button" class="btn btn-default travelers-picker" uib-dropdown-toggle ng-disabled="disabled">
+          {{ selectedAdults }} <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu travelers-picker" uib-dropdown-menu role="menu" aria-labelledby="adults-button">
+          <li ng-repeat="i in travelersChoices" role="menuitem" ng-click="selectAdults(i)"><a>{{ i }}</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <a class="btn btn-primary" role="button" ng-href="#/hotels?city={{ selectedCity }}&checkin={{ selectedCheckin | date:'yyyy-MM-dd':'UTC' }}&checkout={{ selectedCheckout | date:'yyyy-MM-dd':'UTC' }}&adults={{ selectedAdults }}">Search</a>
+  </form>
+
+
+</div>
+
+<div class="container" ng-if="search">
+  <label>Found {{ filtered.length }} hotels in {{ search.city }} for {{ search.checkin | date }} - {{ search.checkout | date }}:</label>
+  <div class="list-group" >
+    <a class="list-group-item" ng-repeat="hotel in hotels | filter:search.filter as filtered" ng-href="#/hotels/{{ hotel.hotelid }}?checkin={{ search.checkin | date:'yyyy-MM-dd':'UTC' }}&checkout={{ search.checkout | date:'yyyy-MM-dd':'UTC' }}&adults={{ search.adults }}">
+
+      <div class="media">
+        <div class="media-left">
+            <img class="media-object img-thumbnail list-image" ng-src="{{ hotel.imageurl }}" alt="Hotel Picture">
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">{{ hotel.name }}</h4>
+          <p>{{ hotel.addr1 }}, {{ hotel.city }}<p>
+          <h4><span class="label label-success">${{ hotel.baseprice }} per night</span><h4>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
