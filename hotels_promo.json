@@ -18,7 +18,8 @@
         "status": "on",
         "discounted_price": 328,
         "cashback": "off",
-        "total_cashback": 15
+        "total_cashback": 15,
+        "city_id": 717300
     },
     {
         "hotelid": 25813,
@@ -38,7 +39,9 @@
         "status": "on",
         "discounted_price": 348,
         "cashback": "on",
-        "total_cashback": 15
+        "total_cashback": 15,
+        "city_id": 717300
+
     },
     {
         "hotelid": 29638,
@@ -59,7 +62,8 @@
         "status": "on",
         "discounted_price": 450,
         "cashback": "on",
-        "total_cashback": 15
+        "total_cashback": 15,
+        "city_id": 2421836
     },
     {
         "hotelid": 73114,
@@ -80,7 +84,8 @@
         "status": "off",
         "discounted_price": 320,
         "cashback": "on",
-        "total_cashback": 15
+        "total_cashback": 15,
+        "city_id": 2421836
     },
     {
         "hotelid": 74084,
@@ -101,7 +106,8 @@
         "status": "on",
         "discounted_price": 380,
         "cashback": "on",
-        "total_cashback": 10
+        "total_cashback": 10,
+        "city_id": 2160986
     },
     {
         "hotelid": 71739,
@@ -122,7 +128,8 @@
         "status": "on",
         "discounted_price": 450,
         "cashback": "off",
-        "total_cashback": 15
+        "total_cashback": 15,
+        "city_id": 2160986
     },
     {
         "hotelid": 27183,
@@ -143,7 +150,8 @@
         "status": "on",
         "discounted_price": 200,
         "cashback": "off",
-        "total_cashback": 15
+        "total_cashback": 15,
+        "city_id": 542609
     },
     {
         "hotelid": 40652,
@@ -164,7 +172,8 @@
         "status": "on",
         "discounted_price": 120,
         "cashback": "on",
-        "total_cashback": 10
+        "total_cashback": 10,
+        "city_id": 542609
     },
     {
         "hotelid": 93618,
@@ -185,7 +194,8 @@
         "status": "on",
         "discounted_price": 250,
         "cashback": "on",
-        "total_cashback": 15
+        "total_cashback": 15,
+        "city_id": 2490299
     },
     {
         "hotelid": 59509,
@@ -206,6 +216,7 @@
         "status": "on",
         "discounted_price": 120,
         "cashback": "on",
-        "total_cashback": 15
+        "total_cashback": 15,
+        "city_id": 2490299
     }
 ]
