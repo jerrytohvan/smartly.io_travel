@@ -2,7 +2,6 @@
 
 <div class="jumbotron text-center">
     <h1>{{ hotel.name }}</h1>
-
     <p><img class="hotel-image" ng-src="{{ hotel.imageurl }}"><p>
 </div>
 
@@ -46,5 +45,8 @@
 </div>
 
 <script type="text/javascript">
+  const getHotelName = document.querySelector("#main > div > div.jumbotron.text-center.ng-scope > h1").textContent;
   fbq('trackCustom', 'ViewContent');
+  snaptr('track', 'VIEW_CONTENT',{'item_category': 'Hotels', 
+'Item_ids':[ getHotelName ]});
 </script>
