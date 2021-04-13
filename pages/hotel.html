@@ -46,7 +46,7 @@
 
 <script type="text/javascript">
   const getHotelName = document.querySelector("#main > div > div.jumbotron.text-center.ng-scope > h1").textContent;
+  console.log(getHotelName);
   fbq('trackCustom', 'ViewContent');
-  snaptr('track', 'VIEW_CONTENT',{'item_category': 'Hotels', 
-'Item_ids':[ getHotelName ]});
+  snaptr('track', 'VIEW_CONTENT',{'item_category': 'Hotels', 'Item_ids':[ getHotelName ]});
 </script>
