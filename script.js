@@ -120,6 +120,7 @@ travelApp.controller('hotelSearchCtrl', ['$scope', '$routeParams', function($sco
     // country: TODO: country from selected country,
     num_adults: $scope.search.adults
     });
+    snaptr('track', 'SEARCH', {'search_string': $scope.search.city});
   }
 }]);
 
@@ -146,6 +147,8 @@ travelApp.controller('hotelCtrl', ['$scope', '$routeParams', '$filter', function
   country: $scope.hotel.country,
   num_adults: $scope.adults
   });
+    
+  snaptr('track', 'VIEW_CONTENT',{'item_category': 'Shoes', 'Item_ids':[$scope.hotel.hotelid]});
 
 }]);
 
