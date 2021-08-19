@@ -1,0 +1,36 @@
+{
+   "key":"rules",
+   "name":"Rules",
+   "events":[
+      {
+         "key":"971329",
+         "name":"Team A v Team",
+         "markets":[
+            {
+               "key":"16255688",
+               "name":"Match Results (Team A v Team B)",
+               "category":"Match Result",
+               "outcomes":[
+                  {
+                     "key":"1",
+                     "name":"Team A",
+                     "price":1.7,
+                  },
+                   {
+                     "key":"2",
+                     "name":"Team B",
+                     "price":2.5,
+                  }
+               ]
+            }
+         ],
+         "specialFixedOddsMarkets":[
+            
+         ],
+         "competitionMetaData":{
+            "featuredName":"AFL",
+            "featuredSortOrder":1
+         }
+      }
+   ]
+}
